@@ -20,7 +20,8 @@ int list_get_head(List *l);
 ```
 There are two additional 'functions' for iteration without mutation:
 * list_foreach
-* list_foreach_reverse
+* list_foreach_reverse  
+  
 They aren't function's per se, rather they are macros which abstract away the nitty-gritties of iteration. Credits go to attractivechaos's [khash](github.com/attractivechaos/klib/blob/master/khash.h) from where I got the idea of using macros in this way rather than taking in a function pointer, or returning an OOP-like iterator object. For example, the `list_foreach` is defined as follows:
 ```C
 #define list_foreach(list, elem_var, code)      \
